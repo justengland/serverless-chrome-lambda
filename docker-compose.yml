@@ -1,0 +1,12 @@
+version: '3'
+volumes:
+  lambda_node_modules:
+
+services:
+  build:
+    image: lambci/lambda:build-nodejs8.10
+    command: npm run build
+    volumes:
+      - ./:/var/task
+      - lambda_node_modules:/var/task/node_modules
+      - ~/.aws/:/root/.aws/

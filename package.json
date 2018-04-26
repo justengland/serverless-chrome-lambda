@@ -7,7 +7,9 @@
     "push": "npm run package && npm run deploy",
     "package": "aws cloudformation package --template-file template.yml --output-template-file template.package.yml --s3-bucket lambda-build-store --s3-prefix serverless-chrome-lambda",
     "deploy": "aws cloudformation deploy --template-file template.package.yml --stack-name serverless-chrome-lambda --capabilities CAPABILITY_IAM",
-    "test": "sam local invoke helloworld -e event.json"
+    "build": "npm i && npm run push",
+    "test": "sam local invoke helloworld -e event.json",
+    "windows:build": "docker-compose run build"
   },
   "author": "Justin England",
   "license": "MIT",
