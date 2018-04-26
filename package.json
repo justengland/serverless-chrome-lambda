@@ -1,0 +1,21 @@
+{
+  "name": "serverless-chrome-lambda",
+  "version": "0.0.1",
+  "description": "A test project to see if I can configure @serverless-chrome/lambda running on SAM",
+  "main": "index.js",
+  "scripts": {
+    "push": "npm run package && npm run deploy",
+    "package": "aws cloudformation package --template-file template.yml --output-template-file template.package.yml --s3-bucket lambda-build-store --s3-prefix serverless-chrome-lambda",
+    "deploy": "aws cloudformation deploy --template-file template.package.yml --stack-name serverless-chrome-lambda --capabilities CAPABILITY_IAM",
+    "test": "sam local invoke helloworld -e event.json"
+  },
+  "author": "Justin England",
+  "license": "MIT",
+  "dependencies": {
+    "@serverless-chrome/lambda": "^1.0.0-42",
+    "chrome-remote-interface": "^0.25.5"
+  },
+  "devDependencies": {
+    "chrome-launcher": "^0.10.2"
+  }
+}
