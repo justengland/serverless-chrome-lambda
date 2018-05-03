@@ -7,7 +7,7 @@ A test project to see if I can configure @serverless-chrome/lambda running on SA
  ```bash
  $ npm install -g aws-sam-local
  ```
- ### Test SAM Local
+### Test SAM Local
  ```bash
 sam --version
 ```
