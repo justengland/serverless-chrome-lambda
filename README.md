@@ -2,7 +2,7 @@
 A test project to see if I can configure @serverless-chrome/lambda running on SAM
 
 ## Setup
- ###[Install Sam Local](https://github.com/awslabs/aws-sam-local)
+### [Install Sam Local](https://github.com/awslabs/aws-sam-local)
  *docker required*
  ```bash
  $ npm install -g aws-sam-local
@@ -12,17 +12,17 @@ A test project to see if I can configure @serverless-chrome/lambda running on SA
 sam --version
 ```
  
- ### Install local dependencies
+### Install local dependencies
  ```bash
  $ npm i 
  ```
  
- ### Test lambda locally
+### Test lambda locally
   ```bash
   $ sam local invoke helloworld -e event.json
   ```
  
- ### Publish 
+### Publish 
    ```bash
    $ npm run push
    ```
