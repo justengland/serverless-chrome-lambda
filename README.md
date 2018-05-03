@@ -9,8 +9,8 @@ A test project to see if I can configure @serverless-chrome/lambda running on SA
  ```
 ### Test SAM Local
  ```bash
-sam --version
-```
+ $ sam --version
+ ```
  
 ### Install local dependencies
  ```bash
@@ -18,13 +18,13 @@ sam --version
  ```
  
 ### Test lambda locally
-  ```bash
-  $ sam local invoke helloworld -e event.json
-  ```
+ ```bash
+ $ sam local invoke helloworld -e event.json
+ ```
  
 ### Publish 
-   ```bash
-   $ npm run push
-   ```
+  ```bash
+  $ npm run push
+  ```
 
 
